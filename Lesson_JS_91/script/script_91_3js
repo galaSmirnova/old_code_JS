@@ -1,0 +1,20 @@
+function getRandomInt(min,max){
+	return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function rangeRand(min,max){
+	let arr = [];
+	for(let i=min;i<=max;i++){
+	arr.push(i);
+	}
+	console.log(arr);
+	let res=[];
+	while(arr.length>0){
+		let random = getRandomInt(0, arr.length - 1);
+		console.log(random);
+		let elem = arr.splice(random,1)[0];
+		res.push(elem);
+	}
+	return res;
+}
+console.log(rangeRand(1,5));
